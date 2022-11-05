@@ -1,2 +1,2 @@
 # JAVA_String
-here i add some string code from java
+here I, add some string code from java
