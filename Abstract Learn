@@ -1,0 +1,76 @@
+package AbstractClass2;
+
+public class Circle extends Shape{
+    Circle(double a)
+    {
+        super(a,a);
+    }
+   void area()
+    {
+        double result=3.1416*a*a;
+        System.out.println("Result is: "+result);
+
+    }
+}
+
+package AbstractClass2;
+
+public class Rectangle extends Shape{
+    Rectangle(double a, double b)
+    {
+        super(a,b);
+    }
+
+    @Override
+   void area() {
+        double result=a*b;
+        System.out.println("Result is: "+result);
+    }
+}
+
+package AbstractClass2;
+
+public abstract class Shape {
+    double a,b;
+    Shape(double a, double b)
+    {
+        this.a=a;
+        this.b=b;
+    }
+
+ abstract void area();
+
+
+}
+package AbstractClass2;
+
+public class Triangle extends Shape {
+    Triangle(double a, double b)
+    {
+        super(a,b);
+    }
+
+    @Override
+ void area() {
+        double result= .5*a*b;
+        System.out.println("Result is: "+result);
+    }
+}
+
+package AbstractClass2;
+
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        Shape shape;
+        shape =new Triangle(sc.nextDouble(),sc.nextDouble());
+        shape.area();
+        shape =new Rectangle(sc.nextDouble(),sc.nextDouble());
+        shape.area();
+        shape =new Circle(sc.nextDouble());
+        shape.area();
+    }
+}
+
